@@ -1,6 +1,6 @@
 var theToggle = document.getElementById('toggle');
 
-// based on Todd Motto functions
+// based on Todd Motto functions - with added functions by Marie Apellanes
 // https://toddmotto.com/labs/reusable-js/
 
 // hasClass
@@ -36,7 +36,18 @@ function toggleClass(elem, className) {
     }
 }
 
+// Class toggle on ouside click
+function closeToggle(event) {
+    if (!theToggle.contains(event.target) && theToggle.classList.contains('on')){
+    toggleClass(theToggle, 'on');
+}
+}
+
+//Attach click event listener to the document
+document.addEventListener('click', closeToggle);
+
 theToggle.onclick = function() {
    toggleClass(this, 'on');
    return false;
 }
+
