@@ -18808,26 +18808,27 @@ body {
   background-color: #F5F5F5;
 }
 
-.section-xl.video-hero {
-  background-image: url("../images/50yrs_Hero_banner.jpeg");
+.hero-banner {
   width: 100%;
-  height: 80vh;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+.hero-banner-mobile {
+  display: none;
 }
 
 .win-txt {
   font-size: 175px;
+  -webkit-text-stroke: 5px #fff;
 }
 
 .hr-lines:before {
   content: " ";
   display: block;
-  height: 5px;
-  width: 25px;
+  height: 2px;
+  width: 45px;
   position: absolute;
   top: 50%;
-  left: -35px;
+  left: -55px;
   background: #fff;
 }
 
@@ -18841,13 +18842,13 @@ body {
 
 .hr-lines:after {
   content: " ";
-  height: 5px;
-  width: 25px;
+  height: 2px;
+  width: 45px;
   background: #fff;
   display: block;
   position: absolute;
   top: 50%;
-  right: -35px;
+  right: -55px;
 }
 
 span.text-kubota-orange.fw-bold {
@@ -18911,13 +18912,18 @@ button.btn.kubota-grey.text-light:hover {
   background-color: #54595E;
 }
 
+.btn-size {
+  padding: 6px 65px !important;
+}
+
 #toggle {
   display: block;
   width: 25px;
-  height: 20px;
+  height: 0;
   margin: 15px 10px;
   position: relative;
   z-index: 1;
+  left: -10px;
 }
 
 #toggle span:after,
@@ -18971,8 +18977,8 @@ button.btn.kubota-grey.text-light:hover {
 #menu {
   position: absolute;
   color: #fff;
-  width: 200px;
-  margin: -65px 0 0 -160px;
+  width: 280px;
+  margin: -65px 0 0 -250px;
   text-align: right;
   background: #38404a;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
@@ -19227,6 +19233,23 @@ footer a {
   border: none;
 }
 
+.m-50 {
+  margin: 50px;
+}
+
+.w-30 {
+  width: 20%;
+}
+
+.logo-size {
+  height: 60px;
+  padding: 3px 0;
+}
+
+.mr-5 {
+  margin-right: 3rem !important;
+}
+
 @media (max-width: 767px) {
   .text-xs-center {
     text-align: center;
@@ -19236,7 +19259,9 @@ footer a {
   }
   .empty.kubota-orange {
     background-color: rgba(56, 64, 74, 0.9294117647);
-    height: 40px !important;
+  }
+  img.logo-menu.mobile.kubota-orange.bottom {
+    width: 100% !important;
   }
 }
 @media only screen and (min-width: 100px) and (max-width: 700px) {
@@ -19245,12 +19270,6 @@ footer a {
   }
   .mobile {
     display: block;
-  }
-  #menu {
-    margin: -65px 0 0 215px;
-  }
-  a#toggle {
-    margin: -22px 0 0 380px;
   }
   button.btn.kubota-orange.text-light.mx-3.desktop {
     /* visibility: hidden; */
@@ -19266,11 +19285,6 @@ footer a {
   img.logo-menu.mobile.kubota-orange.bottom {
     position: absolute;
     bottom: 0;
-  }
-  .section-xl.video-hero.py-5 {
-    background-image: url("../images/Kubota_50_Years.jpg");
-    height: 80vh;
-    background-position-y: center;
   }
   .win-txt {
     font-size: 120px;
@@ -19294,7 +19308,23 @@ footer a {
     font-size: 18px;
   }
   .equal-btn {
-    width: 78% !important;
+    width: 80% !important;
+  }
+  .w-30 {
+    width: 41%;
+  }
+  br {
+    display: none;
+  }
+  .logo-size {
+    width: auto;
+  }
+  .hero-banner {
+    display: none !important;
+  }
+  .hero-banner-mobile {
+    display: block !important;
+    width: 100%;
   }
 }
 /* (320x480) iPhone (Original, 3G, 3GS) */
@@ -19304,6 +19334,57 @@ footer a {
     margin: 0;
   }
   #menu {
-    margin: -65px 0 0 -160px;
+    margin: -65px 0 0 -245px;
+  }
+  .mobile-container-width-100 {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0;
+  }
+  .pm-xs-0 {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .mob-mpb-0 {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .mob-text {
+    padding-top: 1.2em !important;
+  }
+  li {
+    padding: 20px 0;
+  }
+  footer.kubota-grey.text-light.py-5 li {
+    padding: 10px 0;
+  }
+  .mw-90 {
+    width: 90% !important;
+  }
+  .row.col-10.col-lg-10.d-lg-inline-flex.d-sm-block.d-xs-block {
+    width: 100%;
+    display: block;
+  }
+  .w-xs-100 {
+    width: 100% !important;
+  }
+  .equal-btn {
+    width: 80% !important;
+  }
+  .mr-5 {
+    margin-right: 0 !important;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1199px) {
+  button.btn.equal-btn.find-btn.kubota-orange.text-light.m-3.px-5.w-100 {
+    padding: 8% !important;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 847px) {
+  .w-30 {
+    width: 40%;
+  }
+  .find-btn {
+    padding: 8% !important;
   }
 }/*# sourceMappingURL=style.css.map */
